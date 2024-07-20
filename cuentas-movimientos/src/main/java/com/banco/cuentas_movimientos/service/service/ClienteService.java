@@ -2,6 +2,7 @@ package com.banco.cuentas_movimientos.service.service;
 
 import com.banco.cuentas_movimientos.service.dto.ClienteDTO;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestTemplate;
@@ -12,7 +13,8 @@ public class ClienteService {
     @Autowired
     private RestTemplate restTemplate;
 
-    private final String clienteServiceUrl = "http://localhost:8080/clientes";
+    @Value("${cliente.service.url}")
+    private String clienteServiceUrl;
 
     public ClienteDTO getClienteById(Integer clienteId) {
         try {
@@ -24,3 +26,4 @@ public class ClienteService {
         }
     }
 }
+
