@@ -25,6 +25,14 @@ Para levantar el proyecto, ejecutar el siguiente comando en la raíz del proyect
 > docker-compose up
 
 
+Acceso desde un visor de base de datos externo:
+
+> URL: jdbc:mysql://localhost:3307/banco
+
+> Usuario: root
+
+> Contraseña: root
+
 Saludos,
 
 Jeisson Junco Gonzalez
