@@ -1,0 +1,392 @@
+{
+	"info": {
+		"_postman_id": "fceb1b45-2da6-456c-8036-70c0448d5d94",
+		"name": "Banco",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "29892604"
+	},
+	"item": [
+		{
+			"name": "Personas",
+			"item": [
+				{
+					"name": "Buscar Personas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8080/personas"
+					},
+					"response": []
+				},
+				{
+					"name": "Crear Personas",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Jeisson Junco\",\r\n    \"genero\": \"Masculino\",\r\n    \"edad\": 28,\r\n    \"identificacion\": \"123456787\",\r\n    \"direccion\": \"Calle Falsa 123\",\r\n    \"telefono\": \"+573202670002\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8080/personas"
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Personas por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8080/personas/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Personas por ID",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Pepito Pérez\",\r\n    \"genero\": \"Masculino\",\r\n    \"edad\": 31,\r\n    \"identificacion\": \"123456789\",\r\n    \"direccion\": \"Calle Falsa 123\",\r\n    \"telefono\": \"555-1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8080/personas/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Personas por ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "localhost:8080/personas/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Personas por ID",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"edad\": 32,\r\n    \"direccion\": \"Nueva Calle 456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8080/personas/1"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Clientes",
+			"item": [
+				{
+					"name": "Crear Clientes",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"idPersona\": 1,\r\n  \"contrasena\": \"12345678\",\r\n  \"estado\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8080/clientes"
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Clientes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8080/clientes"
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Clientes por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8080/clientes/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Personas por ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "localhost:8080/clientes/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Personas por ID",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"estado\": false,\r\n    \"contrasena\": \"nuevaPassword123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8080/clientes/2"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cuentas",
+			"item": [
+				{
+					"name": "Buscar cuentas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8081/cuentas"
+					},
+					"response": []
+				},
+				{
+					"name": "Crear cuentas",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"numeroCuenta\": \"123456789\",\r\n    \"tipoCuenta\": \"Ahorros\",\r\n    \"saldoInicial\": 1000.00,\r\n    \"estado\": true,\r\n    \"clienteId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8081/cuentas"
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar cuentas por ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Juan Pérez\",\r\n    \"genero\": \"Masculino\",\r\n    \"edad\": 30,\r\n    \"identificacion\": \"123456789\",\r\n    \"direccion\": \"Calle Falsa 123\",\r\n    \"telefono\": \"555-1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8081/cuentas/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Cuentas por ID",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"numeroCuenta\": \"123456789\",\r\n    \"tipoCuenta\": \"Ahorros\",\r\n    \"saldoInicial\": 1500.00,\r\n    \"estado\": false,\r\n    \"clienteId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8081/cuentas/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Cuentas por ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "localhost:8081/cuentas/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Cuentas por ID",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"saldoInicial\": 5000.00,\r\n    \"estado\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8081/cuentas/1"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Movimientos",
+			"item": [
+				{
+					"name": "Buscar movimientos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8081/movimientos"
+					},
+					"response": []
+				},
+				{
+					"name": "Crear movimientos",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"cuentaId\": 1,\r\n  \"tipoMovimiento\": \"RETIRO\",\r\n  \"valor\": -500.0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8081/movimientos"
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar movimientos por ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Juan Pérez\",\r\n    \"genero\": \"Masculino\",\r\n    \"edad\": 30,\r\n    \"identificacion\": \"123456789\",\r\n    \"direccion\": \"Calle Falsa 123\",\r\n    \"telefono\": \"555-1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8081/movimientos/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar movimientos por ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "localhost:8081/movimientos/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar movimientos por ID Copy",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cuentaId\": 2,\r\n    \"tipoMovimiento\": \"Depósito\",\r\n    \"valor\": 600.00,\r\n    \"saldo\": 1600.00\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8081/movimientos/2"
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar movimientos por ID Copy",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"valor\": 1500.00,\r\n    \"saldo\": 2500.00\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8081/movimientos/2"
+					},
+					"response": []
+				},
+				{
+					"name": "Reporte",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/reportes?clienteId=1&fechaInicio=2024-07-01T00:00:00&fechaFin=2024-08-20T00:59:59",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"reportes"
+							],
+							"query": [
+								{
+									"key": "clienteId",
+									"value": "1"
+								},
+								{
+									"key": "fechaInicio",
+									"value": "2024-07-01T00:00:00"
+								},
+								{
+									"key": "fechaFin",
+									"value": "2024-08-20T00:59:59"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
