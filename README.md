@@ -1,7 +1,3 @@
-Buen día equipo Devsu,
-
-Agradezco la oportunidad de participar en esta prueba. He completado todos los requerimientos del test y quedo atento a sus comentarios.
-
 El proyecto está dockerizado, incluyendo tanto los microservicios como el servidor de base de datos MySQL. Para mayor accesibilidad, en el archivo `docker-compose.yml` se ha incluido la instrucción para ejecutar el script de creación de la base de datos, ubicado en la carpeta `init`.
 
 ## Microservicios
